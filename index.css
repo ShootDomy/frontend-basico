@@ -1,0 +1,70 @@
+body {
+  background-color: rgba(228, 87, 243, 0.3);
+  padding: 20px;
+  /* font-weight: bold;
+  font-size: 20px;
+  color: #333; */
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  aling-items: center;
+  justify-content: space-around;
+}
+
+#foto {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 5px;
+  object-fit: contain;
+}
+
+.datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  /* justify-content: flex-start; */
+  /* align-content: flex-start; */
+}
+
+.redes {
+  list-style-type: none;
+  padding: 0;
+}
+
+.redes-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+/* .titulo {
+  //class selector
+  color: red;
+}
+
+#titulo {
+  //id selector
+  color: blue;
+}
+
+h1 {
+  //element selector
+  color: green;
+} */
