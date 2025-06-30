@@ -578,7 +578,7 @@ p {
 /* VARIANTES DE COLOR PARA NIVELES             */
 /* =========================================== */
 .progress-bar.advanced {
-  --progress-fill: #2ecc71;
+  --progress-fill: #23cc62;
 }
 
 .progress-bar.intermediate {
@@ -586,7 +586,7 @@ p {
 }
 
 .progress-bar.basic {
-  --progress-fill: #e74c3c;
+  --progress-fill: #a55ee0;
 }
 
 /* =========================================== */
