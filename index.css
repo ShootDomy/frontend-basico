@@ -442,7 +442,7 @@ p {
 .list li {
   display: flex;
   align-items: center;
-  padding: 10px 12px;
+  padding: 10px 0;
   background-color: var(--primary-bg);
   border-radius: 8px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -460,11 +460,12 @@ p {
 
 .list li span::before {
   content: "•";
-  position: absolute;
-  left: 8px;
+  /* position: absolute; */
+  /* left: 8px; */
   color: var(--progress-fill);
   font-size: 1.5rem;
   line-height: 0;
+  margin-right: 8px;
 }
 
 /* Estilos para niveles de habilidad */
@@ -650,6 +651,16 @@ p {
   .ag-courses_box {
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+  }
+
+  .header {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .datos h2 {
+    font-weight: 300;
   }
 }
 
