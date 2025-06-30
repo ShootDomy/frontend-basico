@@ -131,6 +131,7 @@ body {
   border-left: 2px solid #a619b6;
   transition: 0.5s;
   cursor: pointer;
+  list-style: none;
 }
 
 .lista-ref ul li:hover {
@@ -165,7 +166,7 @@ body {
   transform: scaleX(1);
 }
 
-// CERTIFICATES
+// CERTIFICACIONES
 .ag-format-container {
   width: 1142px;
   margin: 0 auto;
@@ -180,7 +181,6 @@ body {
   align-items: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  /* padding: 40px 0; */
 }
 
 .ag-courses_item {
@@ -195,16 +195,11 @@ body {
 .ag-courses-item_link {
   display: block;
   padding: 30px 20px;
-  background-color: #121212;
+  background-color: rgb(255, 255, 255);
   overflow: hidden;
   position: relative;
 }
 
-.ag-courses-item_link:hover,
-.ag-courses-item_link:hover .ag-courses-item_date {
-  text-decoration: none;
-  color: #fff;
-}
 .ag-courses-item_link:hover .ag-courses-item_bg {
   -webkit-transform: scale(10);
   -ms-transform: scale(10);
@@ -217,16 +212,26 @@ body {
   overflow: hidden;
   font-weight: bold;
   font-size: 15px;
-  color: #fff;
+  color: #000;
   z-index: 2;
   position: relative;
+  transition: color 0.5s ease;
 }
 
 .ag-courses-item_date-box {
   font-size: 18px;
-  color: #fff;
+  color: #000;
   z-index: 2;
   position: relative;
+  transition: color 0.5s ease;
+}
+
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date,
+.ag-courses-item_link:hover .ag-courses-item_title,
+.ag-courses-item_link:hover .ag-courses-item_date-box {
+  text-decoration: none;
+  color: #fff;
 }
 
 .ag-courses-item_date {
@@ -266,6 +271,11 @@ body {
   background-color: #4c49ea;
 }
 
+.experiencia {
+  /* background: pink; */
+  padding: 20px;
+}
+
 // EXPERIENCIA
 .container {
   margin: 0 40px;
@@ -277,7 +287,6 @@ body {
 
 .container .tab {
   position: relative;
-  padding: 0 20px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   overflow: hidden;
@@ -292,7 +301,7 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 15px 0;
+  padding: 15px 15px;
   position: relative;
 }
 
@@ -323,19 +332,34 @@ body {
   font-size: 1.25em;
   border-radius: 5px;
   margin-right: 10px;
+  transition: all 0.5s ease-out;
+  /* display: none; */
+  /* margin-left: 10px; */
 }
 
 .container .tab input:checked ~ label h2 {
+  /* display: none; */
+  width: 0.5px;
+  visibility: hidden;
+}
+
+.numero {
+  visibility: hidden;
+}
+
+.container .tab input:checked ~ .numero {
   position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
   width: 100%;
   height: 100%;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.05);
   font-size: 8em;
-  justify-content: flex-end;
-  padding: 20px;
-  background: transparent;
+  visibility: visible;
+  justify-content: end;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+
+  /* background: red; */
 }
 
 .container .tab label h3 {
@@ -358,7 +382,11 @@ body {
   transition: max-height 0.5s ease-in;
 }
 
-.container .tab .content p {
+.container .tab .content p,
+.container .tab .content strong,
+.container .tab .content span,
+/* .container .tab .content ul,
+.container .tab .content ul li */ {
   position: relative;
   padding: 10px 0;
   color: #333;
@@ -441,8 +469,11 @@ body {
 /* BARRA DE PROGRESO MEJORADA                  */
 /* =========================================== */
 .progress-container {
+  display: grid;
   width: 100%;
   margin: 15px 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-medium);
 }
 
 .progress-label {
