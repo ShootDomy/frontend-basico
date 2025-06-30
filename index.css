@@ -60,6 +60,21 @@ p {
   text-align: justify;
 }
 
+ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #a619b6;
+}
+
+.contacto ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+
 #foto {
   background-color: rgba(255, 255, 255, 0.95);
   width: 200px;
@@ -128,6 +143,13 @@ p {
   flex-direction: row;
   align-items: center;
   gap: 5px;
+  margin: 10px 0;
+}
+
+.redes img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
 }
 
 .lista-ref {
@@ -470,7 +492,7 @@ p {
 
 /* Estilos para niveles de habilidad */
 .list li[data-level="Avanzado"] span::before {
-  color: #2ecc71;
+  color: #23cc62;
 }
 
 .list li[data-level="Intermedio"] span::before {
@@ -478,7 +500,7 @@ p {
 }
 
 .list li[data-level="Basico"] span::before {
-  color: #e74c3c;
+  color: #a55ee0;
 }
 
 /* =========================================== */
