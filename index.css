@@ -36,8 +36,8 @@ body {
   /* background-color: #e457f3;
    */
   background-color: rgb(240, 240, 240);
-  padding: 20px;
-  margin: 0 100px;
+  padding: 0;
+  margin: 0;
 }
 
 .header {
@@ -48,6 +48,10 @@ body {
   justify-content: space-around;
   padding: 10px;
   color: white;
+}
+
+p {
+  text-align: justify;
 }
 
 #foto {
@@ -80,15 +84,28 @@ body {
   padding: 15px;
 }
 
-.columna:nth-child(2) {
+.columna h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* .columna:nth-child(2) {
   width: 100%;
   min-width: 0;
-}
+} */
 
 .columna2 {
   /* background-color: rgba(255, 255, 255, 0.8); */
-  width: 100%;
-  display: block;
+  /* width: 100%; */
+  /* background: red; */
+  /* display: block; */
+}
+
+.columna2 h2 {
+  margin-bottom: var(--gap-small);
+  border-bottom: 2px solid var(--text-secondary);
 }
 
 .columna1 {
@@ -168,8 +185,8 @@ body {
 
 // CERTIFICACIONES
 .ag-format-container {
-  width: 1142px;
-  margin: 0 auto;
+  /* width: 1142px; */
+  /* margin: 0 auto; */
 }
 
 .ag-courses_box {
@@ -181,13 +198,13 @@ body {
   align-items: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .ag-courses_item {
-  -ms-flex-preferred-size: calc(25.33333% - 30px);
-  flex-basis: calc(25.33333% - 30px);
-
-  margin: 0 15px 30px;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 33.33%;
+  /* margin: 0 15px 30px; */
   overflow: hidden;
   border-radius: 28px;
 }
@@ -622,10 +639,6 @@ body {
   :root {
     --progress-height: 14px;
     --gap-medium: 15px;
-  }
-
-  .columna {
-    padding: 15px;
   }
 
   .list h2 {
