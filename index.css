@@ -40,6 +40,12 @@ body {
   margin: 0;
 }
 
+main {
+  /* container-type: inline-size;
+  margin: auto; */
+  padding: 0 50px;
+}
+
 .header {
   background-color: rgb(61, 60, 60);
   display: flex;
@@ -184,27 +190,20 @@ p {
 }
 
 // CERTIFICACIONES
+
 .ag-format-container {
   /* width: 1142px; */
   /* margin: 0 auto; */
+  /* background: red; */
 }
 
 .ag-courses_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
 .ag-courses_item {
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 33.33%;
-  /* margin: 0 15px 30px; */
   overflow: hidden;
   border-radius: 28px;
 }
@@ -288,15 +287,14 @@ p {
   background-color: #4c49ea;
 }
 
+// EXPERIENCIA
 .experiencia {
   /* background: pink; */
   padding: 20px;
 }
-
-// EXPERIENCIA
 .container {
   margin: 0 40px;
-  max-width: 600px;
+  /* max-width: 600px; */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -628,6 +626,10 @@ p {
     object-fit: contain;
   }
 
+  main {
+    padding: 0;
+  }
+
   .info {
     grid-template-columns: 1fr;
   }
@@ -643,6 +645,11 @@ p {
 
   .list h2 {
     font-size: 1.3rem;
+  }
+
+  .ag-courses_box {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
   }
 }
 
